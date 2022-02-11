@@ -13,7 +13,7 @@ const Hero = () => {
           className="rounded-3xl"
         />
 
-        <div className="absolute top-1/2 md:top-[500px] w-full text-center text-white">
+        <div className="absolute top-1/2  w-full text-center text-white">
           <p className="text-lg font-bold sm:text-xl">
             Not sure where to go? Perfect.
           </p>

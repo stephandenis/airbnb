@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const LargeCard = ({ img, title, description, buttonText }) => {
+const LargeCard = ({ img, title, buttonText }) => {
   return (
     <section className="relative py-16 cursor-pointer">
       <div className="relative h-[500px] min-w-[300px]">
