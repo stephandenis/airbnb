@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
+import LargeCard from "../components/LargeCard";
 import MediumCard from "../components/MediumCard";
 import SmallCard from "../components/SmallCard";
 
@@ -17,7 +18,7 @@ export default function Home({ exploreData, cardsData }) {
       <Hero />
 
       <main className="max-w-7xl mx-auto px-8 sm:px-16">
-        <section className="pt-6">
+        <section className="mt-20">
           <h2 className="text-4xl font-semibold pb-5">Explore Nearby</h2>
 
           {/* Api endpoints */}
@@ -34,7 +35,9 @@ export default function Home({ exploreData, cardsData }) {
         </section>
 
         <section>
-          <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
+          <h2 className="text-4xl font-semibold py-8 mt-20">
+            Inspiration for your next trip
+          </h2>
 
           <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
             {cardsData?.map(({ img, title }) => (
@@ -42,6 +45,12 @@ export default function Home({ exploreData, cardsData }) {
             ))}
           </div>
         </section>
+
+        <LargeCard
+          img="https://a0.muscache.com/im/pictures/cca24f3f-8f66-4e9d-98d8-dd5cda8911eb.jpg?im_w=1920"
+          title="Questions about hosting?"
+          buttonText="Ask a Superhost"
+        />
       </main>
     </div>
   );
