@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import { useRouter } from "next/router";
 import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
+import Mapa from "../components/Mapa";
 
 const Search = ({ searchResults }) => {
   const router = useRouter();
@@ -56,6 +57,10 @@ const Search = ({ searchResults }) => {
             )}
           </div>
         </section>
+
+        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+          <Mapa searchResults={searchResults} />
+        </section>
       </main>
 
       <Footer />
@@ -66,7 +71,7 @@ const Search = ({ searchResults }) => {
 export default Search;
 
 export async function getServerSideProps() {
-  const searchResults = await fetch("https://jsonkeeper.com/b/MBJE").then(
+  const searchResults = await fetch("https://jsonkeeper.com/b/5NPS").then(
     (res) => res.json()
   );
   return {
